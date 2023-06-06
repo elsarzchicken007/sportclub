@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./getData.js"></script>
+    <style>
+        h1{
+            color:rgb(25, 24, 24)
+
+        }
+        .mybtn1{
+            width: 200px;
+            height: 100px;
+            border:none;
+            color:white;
+            background-color:rgba(236, 90, 5, 0.824);
+            padding:10px 30px;
+            font-size:500%;
+
+        }
+        .mybtn2{
+            width: 200px;
+            height: 100px;
+            border:none;
+            color:white;
+            background-color:rgb(106, 183, 116);
+            padding:10px 30px;
+            font-size:500%;
+
+        }
+        .mybtn3{
+            width: 100px;
+            height: 30px;
+            border:none;
+            color:rgb(28, 14, 63);
+            background-color:rgb(170, 197, 172);
+            padding:5px 15px;
+            font-size:80%;
+
+        }
+        .resultText{
+            width: 200px;
+            height:auto;
+            padding: left 50px;
+            font-size:500%;
+        }
+
+    </style>
+</head>
+<body>
+	<!-- <input type="text" Id="data1">
+	<input type="button" value="Send" onclick="getValueInText();">
+    <br> -->
+    <table>
+        <tr>
+            <th></th>
+            <th><h1 id="juname">Team1</h1></th>
+            <th><h1 id="grname">Team2</h1></th>
+        </tr>
+        <tr>
+            <td><h1>1세트</h1></td>
+            <td><input class="mybtn1" type="button" id="team1wScore" value="10" onclick="this.value = this.value - 1;teamRt();"></td>
+            <td><input class="mybtn2" type="button" id="team2wScore" value="10" onclick="this.value = this.value - 1;teamRt();"></td>
+        </tr>
+        <tr>
+            <td><h1>2세트</h1></td>
+            <td><input class="mybtn1" type="button" id="team1mScore" value="10" onclick="this.value = this.value - 1;teamRt();"></td>
+            <td><input class="mybtn2" type="button" id="team2mScore" value="10" onclick="this.value = this.value - 1;teamRt();";></td>
+        </tr>
+        <tr>
+            <td><h1>합계</h1></td>
+            <td><input class="mybtn1" style="font-size:60px;color:rgb(6, 5, 39);height: 80px;"  id="team1Result" type="button" value="20"></td>
+            <td><input class="mybtn2" style="font-size:60px;color:rgb(55, 3, 3);height: 80px;" id="team2Result" type="button" value="20"></td>
+        </tr>
+    </table>
+    <br><br><br><br>
+    <input class="mybtn3" style="background-color:rgba(236, 90, 5, 0.824);" type="button" value="team1 1set+" onclick="miss1w();teamRt();">
+    <input class="mybtn3" style="background-color:rgb(106, 183, 116);" type="button" value="team2 1set+" onclick="miss2w();teamRt();"><br><br>
+    <input class="mybtn3" style="background-color:rgba(236, 90, 5, 0.824);" type="button" value="team1 2set+" onclick="miss1m();teamRt();">
+    <input class="mybtn3" style="background-color:rgb(106, 183, 116);" type="button" value="team2 2set+" onclick="miss2m();teamRt();">
+    <br><br>
+    색상별 학급 이름 입력<br>
+    <input Id="whi1" type="text" placeholder="주황팀">
+    <input Id="whi2" type="text" placeholder="연두팀">
+    <input type="button" value="적용" onclick="whichclass();">
+    
+</body>
+
+
+
+</html>
